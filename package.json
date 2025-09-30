@@ -1,33 +1,24 @@
 {
-  "name": "portfolio-ket",
+  "name": "portfolio-next",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/lekiet2016/Portfolio-Ket.git"
-  },
-  "keywords": [
-    "portfolio",
-    "node",
-    "express",
-    "ejs"
-  ],
-  "author": "Ket",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lekiet2016/Portfolio-Ket/issues"
-  },
-  "homepage": "https://github.com/lekiet2016/Portfolio-Ket#readme",
   "dependencies": {
-    "dotenv": "^17.2.3",
-    "ejs": "^3.1.10",
-    "express": "^5.1.0",
-    "express-ejs-layouts": "^2.5.1",
-    "nodemailer": "^7.0.6"
+    "framer-motion": "^12.23.22",
+    "next": "15.5.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.6.0",
+    "@types/react": "19.1.15",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "5.9.2"
   }
 }

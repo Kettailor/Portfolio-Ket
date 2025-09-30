@@ -1,15 +1,11 @@
-const site = {
-  title: "Tên của bạn | Portfolio",
-  name: "Tên của bạn",
-  role: "Vị trí | Chuyên môn (VD: SEO Specialist)",
-  description: "Mô tả ngắn gọn về bạn và những gì bạn đang làm.",
-  email: "you@example.com",
-  socials: {
-    github: "https://github.com/yourname",
-    linkedin: "https://www.linkedin.com/in/yourname/",
-    facebook: "https://facebook.com/yourname",
-    x: "https://x.com/yourname"
-  }
+export const site = {
+    title: "Ket | Portfolio",
+    name: "Trần Lê Kiệt",
+    role: "Developer",
+    description: "Đang chập chững code đạt được ước mơ lương nghìn đô",
+    email: "lekiet2409@gmail.com",
+    socials: {
+        github: "https://github.com/lekiet2016",
+        facebook: "https://www.facebook.com/trankiet0424/",
+    },
 };
-
-module.exports = { site };
