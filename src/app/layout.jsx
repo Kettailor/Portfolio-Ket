@@ -2,8 +2,11 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { site } from "../data/site.config";
+import { Inter } from "next/font/google";
 
-
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "vietnamese"], // thêm vietnamese
+});
 
 export const metadata = {
   title: site.title,

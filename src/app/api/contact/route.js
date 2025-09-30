@@ -1,20 +1,41 @@
-import { NextResponse } from "next/server";
-import { sendMail } from "../../../lib/mailer";
+import nodemailer from "nodemailer";
 
 export async function POST(req) {
-  const formData = await req.formData();
-  const name = formData.get("name");
-  const email = formData.get("email");
-  const message = formData.get("message");
-
-  if (!name || !email || !message) {
-    return NextResponse.json({ ok: false, error: "Thiếu dữ liệu" }, { status: 400 });
-  }
-
   try {
-    await sendMail({ name, email, message });
-    return NextResponse.json({ ok: true });
-  } catch (e) {
-    return NextResponse.json({ ok: false, error: e.message }, { status: 500 });
+    // Lấy dữ liệu từ form
+    const formData = await req.formData();
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    // Cấu hình transporter
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: process.env.SMTP_PORT === "465",
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    // Gửi mail
+    await transporter.sendMail({
+      from: `"${name}" <${email}>`,
+      to: process.env.SMTP_USER,
+      subject: `Liên hệ từ ${name}`,
+      text: message,
+      html: `
+        <h3>Bạn nhận được tin nhắn mới:</h3>
+        <p><b>Họ tên:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Nội dung:</b> ${message}</p>
+      `,
+    });
+
+    return new Response("Gửi mail thành công ✅", { status: 200 });
+  } catch (err) {
+    console.error(err);
+    return new Response("Lỗi: " + err.message, { status: 500 });
   }
 }
