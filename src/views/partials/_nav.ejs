@@ -1,0 +1,18 @@
+<nav class="border-b bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex h-16 items-center justify-between">
+            <a href="/" class="font-bold">
+                <%= site.name %>
+            </a>
+            <div class="space-x-6">
+                <a class="<%= currentPath==='/'?'text-blue-600 font-medium':'' %>" href="/">Trang chủ</a>
+                <a class="<%= currentPath.startsWith('/projects')?'text-blue-600 font-medium':'' %>" href="/projects">Dự
+                    án</a>
+                <a class="<%= currentPath.startsWith('/about')?'text-blue-600 font-medium':'' %>" href="/about">Giới
+                    thiệu</a>
+                <a class="<%= currentPath.startsWith('/contact')?'text-blue-600 font-medium':'' %>" href="/contact">Liên
+                    hệ</a>
+            </div>
+        </div>
+    </div>
+</nav>

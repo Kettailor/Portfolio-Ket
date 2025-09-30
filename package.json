@@ -1,0 +1,33 @@
+{
+  "name": "portfolio-ket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lekiet2016/Portfolio-Ket.git"
+  },
+  "keywords": [
+    "portfolio",
+    "node",
+    "express",
+    "ejs"
+  ],
+  "author": "Ket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lekiet2016/Portfolio-Ket/issues"
+  },
+  "homepage": "https://github.com/lekiet2016/Portfolio-Ket#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "nodemailer": "^7.0.6"
+  }
+}

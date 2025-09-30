@@ -1,0 +1,35 @@
+    <section class="max-w-3xl mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold">Liên hệ</h1>
+
+
+        <% if (typeof error !=='undefined' && error) { %>
+            <div class="mt-4 p-3 rounded bg-red-50 text-red-700">
+                <%= error %>
+            </div>
+            <% } %>
+
+
+                <% if (sent) { %>
+                    <div class="mt-4 p-3 rounded bg-green-50 text-green-700">Cảm ơn bạn! Mình đã nhận được tin nhắn.
+                    </div>
+                    <% } else { %>
+                        <form class="mt-6 space-y-4" method="POST" action="/contact">
+                            <div>
+                                <label class="block text-sm font-medium">Họ và tên</label>
+                                <input name="name" class="mt-1 w-full border rounded-xl p-3" placeholder="Nguyễn Văn A"
+                                    required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium">Email</label>
+                                <input type="email" name="email" class="mt-1 w-full border rounded-xl p-3"
+                                    placeholder="ban@vidu.com" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium">Nội dung</label>
+                                <textarea name="message" rows="5" class="mt-1 w-full border rounded-xl p-3"
+                                    placeholder="Mình muốn hợp tác..." required></textarea>
+                            </div>
+                            <button class="bg-blue-600 text-white px-5 py-3 rounded-xl" type="submit">Gửi</button>
+                        </form>
+                        <% } %>
+    </section>
