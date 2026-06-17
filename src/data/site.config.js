@@ -6,6 +6,7 @@ export const site = {
     email: "lekiet2409@gmail.com",
     socials: {
         github: "https://github.com/lekiet2016",
+        linkedin: "https://www.linkedin.com/in/KetTailor2409",
         facebook: "https://www.facebook.com/trankiet0424/",
     },
 };
