@@ -1,0 +1,21 @@
+{
+  "name": "Tran Le Kiet Portfolio",
+  "short_name": "KET.DEV",
+  "description": "Full-stack development, UI/UX design, and cyber security portfolio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff4df",
+  "theme_color": "#0879c9",
+  "icons": [
+    {
+      "src": "/brand-icon.png?v=20260611",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/avatar.webp?v=20260617",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
